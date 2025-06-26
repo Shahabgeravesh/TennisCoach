@@ -112,15 +112,23 @@
       const product = products[productId];
       
       try {
-        // For GitHub Pages, we'll use a simple redirect to Stripe Checkout
-        // You'll need to create these checkout sessions in your Stripe Dashboard
-        // or use a backend service
-        
-        // Temporary solution: Show payment instructions
-        alert('Payment processing is being set up. Please contact us directly to book your session, or check back soon for online payment options.');
-        
-        // Alternative: Redirect to contact form
-        // window.location.href = 'contact.html';
+        // For GitHub Pages, we'll use Stripe Payment Links
+        if (productId === 'single') {
+          // Redirect to Single Session Payment Link
+          window.location.href = 'https://buy.stripe.com/4gM9AT55q3oCfE27uNdnW00';
+        } else if (productId === '2person') {
+          // Redirect to 2-Person Session Payment Link
+          window.location.href = 'https://buy.stripe.com/5kQ6oH55qf7k3Vk3exdnW01';
+        } else if (productId === '5session') {
+          // Redirect to 5-Session Package Payment Link
+          window.location.href = 'https://buy.stripe.com/4gMcN5gO80cqezY3exdnW02';
+        } else if (productId === '10session') {
+          // Redirect to 10-Session Package Payment Link
+          window.location.href = 'https://buy.stripe.com/7sYdR91Te7ESajI2atdnW03';
+        } else {
+          // Temporary solution for other packages
+          alert('Payment processing is being set up. Please contact us directly to book your session, or check back soon for online payment options.');
+        }
         
         // Future implementation will use:
         // const response = await fetch('https://your-backend-url.com/create-checkout-session', {
