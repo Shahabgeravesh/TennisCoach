@@ -109,6 +109,24 @@
         navMenu.classList.remove('active');
       }
     });
+    
+    // Form submission debugging
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('form');
+      if (form) {
+        form.addEventListener('submit', function(e) {
+          console.log('Form submitted');
+          
+          // Add a fallback redirect in case Formspree redirect fails
+          setTimeout(function() {
+            // If we're still on the same page after 3 seconds, redirect manually
+            if (window.location.href.includes('contact')) {
+              window.location.href = 'https://rallytenniscoaching.com/thank-you.html';
+            }
+          }, 3000);
+        });
+      }
+    });
   </script>
 </body>
 </html> 
