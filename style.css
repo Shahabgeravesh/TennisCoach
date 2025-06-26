@@ -402,6 +402,49 @@ footer {
 }
 
 /* Responsive Design */
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+  }
+  
+  .features-grid, .qualifications-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .packages-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablets (768px - 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+  }
+  
+  .features-grid, .qualifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .package.featured {
+    grid-column: span 2;
+  }
+}
+
+/* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   nav {
     padding: 0 1rem;
@@ -439,8 +482,21 @@ footer {
   .features-grid, .qualifications-grid {
     grid-template-columns: 1fr;
   }
+  
+  /* Improve touch targets */
+  nav a, .cta-btn, .pay-btn {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-group input, .form-group textarea, .form-group select {
+    min-height: 44px;
+  }
 }
 
+/* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .logo {
     font-size: 1.4rem;
@@ -453,6 +509,7 @@ footer {
   nav a {
     padding: 0.3rem 0.7rem;
     font-size: 0.9rem;
+    min-height: 40px;
   }
   
   .hero {
@@ -466,6 +523,67 @@ footer {
   .cta-btn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+    min-height: 44px;
+  }
+  
+  .features, .about-coach, .pricing, .booking, .contact-form {
+    margin: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
+    font-size: 1.8rem;
+  }
+  
+  .package {
+    padding: 1.5rem;
+  }
+  
+  .pay-btn {
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media (max-width: 360px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+  
+  nav {
+    padding: 0 0.5rem;
+  }
+  
+  nav ul {
+    gap: 0.3rem;
+  }
+  
+  nav a {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+  
+  .cta-btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .features, .about-coach, .pricing, .booking, .contact-form {
+    margin: 1rem 0.3rem;
+    padding: 1rem 0.8rem;
+  }
+  
+  .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
+    font-size: 1.6rem;
   }
 }
 
@@ -716,5 +834,55 @@ footer {
   
   .info-item {
     padding: 1rem;
+  }
+}
+
+/* Mobile Navigation */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.mobile-menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+@media (max-width: 480px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  nav ul.active {
+    display: flex;
+  }
+  
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    text-align: center;
   }
 } 

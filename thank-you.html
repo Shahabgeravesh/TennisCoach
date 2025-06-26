@@ -23,7 +23,12 @@
   <header>
     <nav>
       <div class="logo">Rally Tennis Court</div>
-      <ul>
+      <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="classes.html">Lessons</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -78,5 +83,22 @@
       <p>Daly City, California</p>
     </div>
   </footer>
+  
+  <script>
+    function toggleMobileMenu() {
+      const navMenu = document.getElementById('nav-menu');
+      navMenu.classList.toggle('active');
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const navMenu = document.getElementById('nav-menu');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+      
+      if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html> 
