@@ -22,6 +22,95 @@
   <title>Lessons | Rally Tennis Coaching</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://js.stripe.com/v3/"></script>
+  
+  <!-- Structured Data for Service Offerings -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Tennis Lesson Packages",
+    "description": "Tennis lesson packages and pricing in Daly City, CA",
+    "url": "https://rallytenniscoaching.com/classes.html",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Single Tennis Session",
+          "description": "1-hour private tennis lesson",
+          "provider": {
+            "@type": "Organization",
+            "name": "Rally Tennis Coaching"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "65.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "2-Person Tennis Session",
+          "description": "1-hour tennis lesson for 2 people",
+          "provider": {
+            "@type": "Organization",
+            "name": "Rally Tennis Coaching"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "100.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Service",
+          "name": "5-Session Tennis Package",
+          "description": "5 x 1-hour private tennis lessons",
+          "provider": {
+            "@type": "Organization",
+            "name": "Rally Tennis Coaching"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "275.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Service",
+          "name": "10-Session Tennis Package",
+          "description": "10 x 1-hour private tennis lessons",
+          "provider": {
+            "@type": "Organization",
+            "name": "Rally Tennis Coaching"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "500.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
