@@ -4,9 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com;">
+  <meta http-equiv="Permissions-Policy" content="payment=()">
   <meta name="description" content="Tennis lesson packages and pricing in Daly City, CA. Book private or small group sessions and pay securely online.">
   <meta name="keywords" content="tennis lessons, pricing, Daly City, private tennis, tennis packages, book tennis, pay online">
   <meta name="author" content="Shahab Geravesh">
+  <meta property="og:title" content="Lessons | Rally Tennis Court">
+  <meta property="og:description" content="Tennis lesson packages and pricing in Daly City, CA. Book private or small group sessions.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rallytenniscourt.com/lessons">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Lessons | Rally Tennis Court">
+  <meta name="twitter:description" content="Tennis lesson packages and pricing in Daly City, CA.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>Lessons | Rally Tennis Court</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,24 +33,28 @@
   </header>
   <main>
     <section class="pricing">
-      <h1>Lessons</h1>
-      <div class="package">
-        <h2>Single Session</h2>
-        <p>1 hour, up to 2 people</p>
-        <p class="price">$60</p>
-        <a href="#pay-single" class="pay-btn">Pay with Stripe</a>
-      </div>
-      <div class="package">
-        <h2>5-Session Package</h2>
-        <p>5 x 1 hour, up to 2 people</p>
-        <p class="price">$275 <span class="save">(save $25)</span></p>
-        <a href="#pay-5" class="pay-btn">Pay with Stripe</a>
-      </div>
-      <div class="package">
-        <h2>10-Session Package</h2>
-        <p>10 x 1 hour, up to 2 people</p>
-        <p class="price">$500 <span class="save">(save $100)</span></p>
-        <a href="#pay-10" class="pay-btn">Pay with Stripe</a>
+      <h1>Lesson Packages</h1>
+      <p class="pricing-intro">Choose the package that works best for you. All sessions are 1 hour and can accommodate up to 2 people.</p>
+      <div class="packages-grid">
+        <div class="package">
+          <h2>Single Session</h2>
+          <p class="package-desc">Perfect for trying out tennis or a one-time lesson</p>
+          <p class="price">$60</p>
+          <a href="#pay-single" class="pay-btn">Pay with Stripe</a>
+        </div>
+        <div class="package featured">
+          <div class="featured-badge">Most Popular</div>
+          <h2>5-Session Package</h2>
+          <p class="package-desc">Great value for regular players</p>
+          <p class="price">$275 <span class="save">(save $25)</span></p>
+          <a href="#pay-5" class="pay-btn">Pay with Stripe</a>
+        </div>
+        <div class="package">
+          <h2>10-Session Package</h2>
+          <p class="package-desc">Best value for serious players</p>
+          <p class="price">$500 <span class="save">(save $100)</span></p>
+          <a href="#pay-10" class="pay-btn">Pay with Stripe</a>
+        </div>
       </div>
     </section>
     <section class="booking">
@@ -54,7 +67,10 @@
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+      <p>Daly City, California</p>
+    </div>
   </footer>
 </body>
 </html> 

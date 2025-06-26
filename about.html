@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com;">
+  <meta http-equiv="Permissions-Policy" content="payment=()">
   <meta name="description" content="Meet your Daly City tennis coach. Learn about experience, certifications, and coaching philosophy at Rally Tennis Court.">
   <meta name="keywords" content="tennis coach, Daly City, tennis instructor, about coach, tennis lessons">
   <meta name="author" content="Shahab Geravesh">
+  <meta property="og:title" content="About the Coach | Rally Tennis Court">
+  <meta property="og:description" content="Meet your Daly City tennis coach. Learn about experience, certifications, and coaching philosophy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rallytenniscourt.com/about">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="About the Coach | Rally Tennis Court">
+  <meta name="twitter:description" content="Meet your Daly City tennis coach.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>About the Coach | Rally Tennis Court</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -24,17 +34,37 @@
   <main>
     <section class="about-coach">
       <h1>About Your Coach</h1>
-      <p>Hello! I'm Shahab Geravesh, a passionate tennis coach based in Daly City, CA. With years of experience coaching kids and adults, I focus on making tennis fun, accessible, and rewarding for everyone. Whether you're a complete beginner or looking to improve your game, I provide personalized attention and a supportive environment.</p>
-      <ul>
-        <li>Certified tennis instructor</li>
-        <li>Specialized in coaching kids and beginners</li>
-        <li>Flexible scheduling and tailored lessons</li>
-        <li>Focus on skill development, confidence, and enjoyment</li>
-      </ul>
+      <div class="coach-intro">
+        <p>Hello! I'm Shahab Geravesh, a passionate tennis coach based in Daly City, CA. With years of experience coaching kids and adults, I focus on making tennis fun, accessible, and rewarding for everyone. Whether you're a complete beginner or looking to improve your game, I provide personalized attention and a supportive environment.</p>
+      </div>
+      <div class="coach-qualifications">
+        <h2>Qualifications & Approach</h2>
+        <div class="qualifications-grid">
+          <div class="qualification-item">
+            <h3>Certified Instructor</h3>
+            <p>Professional tennis coaching certification</p>
+          </div>
+          <div class="qualification-item">
+            <h3>Kids Specialist</h3>
+            <p>Specialized in coaching kids and beginners</p>
+          </div>
+          <div class="qualification-item">
+            <h3>Flexible Scheduling</h3>
+            <p>Tailored lessons to fit your schedule</p>
+          </div>
+          <div class="qualification-item">
+            <h3>Holistic Development</h3>
+            <p>Focus on skills, confidence, and enjoyment</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+      <p>Daly City, California</p>
+    </div>
   </footer>
 </body>
 </html> 

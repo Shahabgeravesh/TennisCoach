@@ -3,9 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com;">
+  <meta http-equiv="Permissions-Policy" content="payment=()">
   <meta name="description" content="Private tennis lessons for kids and all ages in Daly City, CA. Book your session with a certified tennis coach. Small group and private sessions available.">
   <meta name="keywords" content="tennis coach, Daly City, private tennis lessons, kids tennis, tennis classes, tennis court, tennis instructor">
   <meta name="author" content="Shahab Geravesh">
+  <meta property="og:title" content="Rally Tennis Court | Private Tennis Lessons in Daly City, CA">
+  <meta property="og:description" content="Private tennis lessons for kids and all ages in Daly City, CA. Book your session with a certified tennis coach.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rallytenniscourt.com">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rally Tennis Court | Private Tennis Lessons in Daly City, CA">
+  <meta name="twitter:description" content="Private tennis lessons for kids and all ages in Daly City, CA.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>Rally Tennis Court | Private Tennis Lessons in Daly City, CA</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -15,7 +25,6 @@
       <div class="logo">Rally Tennis Court</div>
       <ul>
         <li><a href="index.html">Home</a></li>
-       
         <li><a href="classes.html">Lessons</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="about.html">About</a></li>
@@ -30,17 +39,39 @@
     </section>
     <section class="features">
       <h2>Why Choose Rally Tennis Court?</h2>
-      <ul>
-        <li>Certified, experienced coach</li>
-        <li>Kids and beginners welcome</li>
-        <li>Flexible scheduling</li>
-        <li>Safe, supportive environment</li>
-        <li>Located in Daly City, CA</li>
-      </ul>
+      <div class="features-grid">
+        <div class="feature-item">
+          <h3>Certified Coach</h3>
+          <p>Experienced, certified tennis instructor</p>
+        </div>
+        <div class="feature-item">
+          <h3>All Ages Welcome</h3>
+          <p>Kids and beginners welcome</p>
+        </div>
+        <div class="feature-item">
+          <h3>Flexible Scheduling</h3>
+          <p>Convenient times that work for you</p>
+        </div>
+        <div class="feature-item">
+          <h3>Safe Environment</h3>
+          <p>Supportive, encouraging atmosphere</p>
+        </div>
+        <div class="feature-item">
+          <h3>Daly City Location</h3>
+          <p>Conveniently located in Daly City, CA</p>
+        </div>
+        <div class="feature-item">
+          <h3>Personalized Lessons</h3>
+          <p>Tailored to your skill level and goals</p>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+    <div class="footer-content">
+      <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+      <p>Daly City, California</p>
+    </div>
   </footer>
 </body>
 </html> 
