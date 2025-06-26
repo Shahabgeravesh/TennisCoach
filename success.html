@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com https://js.stripe.com;">
+  <meta http-equiv="Permissions-Policy" content="payment=()">
+  <meta name="description" content="Payment successful - Book your tennis lesson with Rally Tennis Court">
+  <meta name="keywords" content="tennis lesson payment, booking confirmation, Daly City tennis">
+  <meta name="author" content="Shahab Geravesh">
+  <meta property="og:title" content="Payment Successful | Rally Tennis Court">
+  <meta property="og:description" content="Thank you for your payment. Book your tennis lesson now!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shahabgeravesh.github.io/TennisCoach/success">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Payment Successful | Rally Tennis Court">
+  <meta name="twitter:description" content="Thank you for your payment. Book your tennis lesson now!">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <title>Payment Successful | Rally Tennis Court</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Rally Tennis Court</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="classes.html">Lessons</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="success-page">
+      <div class="success-content">
+        <div class="success-icon">✅</div>
+        <h1>Payment Successful!</h1>
+        <p>Thank you for your payment. Your tennis lesson package has been confirmed.</p>
+        <div class="next-steps">
+          <h2>Next Steps:</h2>
+          <ol>
+            <li><strong>Book Your Session:</strong> Use the calendar below to schedule your lesson(s)</li>
+            <li><strong>Confirmation Email:</strong> You'll receive a payment confirmation from Stripe</li>
+            <li><strong>Lesson Details:</strong> We'll contact you within 24 hours with additional information</li>
+          </ol>
+        </div>
+        <div class="action-buttons">
+          <a href="#booking" class="cta-btn">Book Your Session Now</a>
+          <a href="classes.html" class="secondary-btn">View All Packages</a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="booking" class="booking">
+      <h2>Book Your Session(s)</h2>
+      <p>Select your preferred date and time below:</p>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/shahabgeravesh/tennis-lesson" style="min-width:320px;height:630px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+      <p>Daly City, California</p>
+    </div>
+  </footer>
+</body>
+</html> 

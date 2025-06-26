@@ -289,6 +289,10 @@ nav a:hover {
   margin-top: 1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(67, 160, 71, 0.3);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 .pay-btn:hover {
@@ -462,5 +466,119 @@ footer {
   .cta-btn {
     padding: 0.8rem 2rem;
     font-size: 1rem;
+  }
+}
+
+/* Success Page */
+.success-page {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.success-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.success-page h1 {
+  color: #1b5e20;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.success-page p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.next-steps {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #43a047;
+}
+
+.next-steps h2 {
+  color: #1b5e20;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.next-steps ol {
+  padding-left: 1.5rem;
+}
+
+.next-steps li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.secondary-btn {
+  display: inline-block;
+  background: #f8f9fa;
+  color: #1b5e20;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #43a047;
+}
+
+.secondary-btn:hover {
+  background: #e8f5e8;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .success-page {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .success-page h1 {
+    font-size: 2rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .next-steps {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .success-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .success-icon {
+    font-size: 3rem;
   }
 } 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com;">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com https://js.stripe.com;">
   <meta http-equiv="Permissions-Policy" content="payment=()">
   <meta name="description" content="Tennis lesson packages and pricing in Daly City, CA. Book private or small group sessions and pay securely online.">
   <meta name="keywords" content="tennis lessons, pricing, Daly City, private tennis, tennis packages, book tennis, pay online">
@@ -18,6 +18,7 @@
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <title>Lessons | Rally Tennis Court</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
   <header>
@@ -40,26 +41,26 @@
           <h2>Single Session</h2>
           <p class="package-desc">Perfect for trying out tennis or a one-time lesson</p>
           <p class="price">$65</p>
-          <a href="#pay-single" class="pay-btn">Pay with Stripe</a>
+          <button class="pay-btn" onclick="checkout('single')">Pay with Stripe</button>
         </div>
         <div class="package">
           <h2>2-Person Session</h2>
           <p class="package-desc">Great for friends, couples, or parent-child lessons</p>
           <p class="price">$100 <span class="save">($50 each, save $30)</span></p>
-          <a href="#pay-2person" class="pay-btn">Pay with Stripe</a>
+          <button class="pay-btn" onclick="checkout('2person')">Pay with Stripe</button>
         </div>
         <div class="package featured">
           <div class="featured-badge">Most Popular</div>
           <h2>5-Session Package</h2>
           <p class="package-desc">Great value for regular players</p>
           <p class="price">$275 <span class="save">(save $50)</span></p>
-          <a href="#pay-5" class="pay-btn">Pay with Stripe</a>
+          <button class="pay-btn" onclick="checkout('5session')">Pay with Stripe</button>
         </div>
         <div class="package">
           <h2>10-Session Package</h2>
           <p class="package-desc">Best value for serious players</p>
           <p class="price">$500 <span class="save">(save $150)</span></p>
-          <a href="#pay-10" class="pay-btn">Pay with Stripe</a>
+          <button class="pay-btn" onclick="checkout('10session')">Pay with Stripe</button>
         </div>
       </div>
     </section>
@@ -78,5 +79,70 @@
       <p>Daly City, California</p>
     </div>
   </footer>
+
+  <script>
+    // Initialize Stripe with your publishable key
+    const stripe = Stripe('pk_live_51Re6RAHg3xKvUAVXpEfmISzs5B6fuDJ6wW2J5okdPKq12DxCxaaM1QcHBektDLQLvYP7XY0V7JkFdEEfaIv1qq0300K4gDlP2E');
+
+    // Product configurations
+    const products = {
+      single: {
+        name: 'Single Tennis Session',
+        price: 6500, // $65.00 in cents
+        description: '1-hour private tennis lesson'
+      },
+      '2person': {
+        name: '2-Person Tennis Session',
+        price: 10000, // $100.00 in cents
+        description: '1-hour tennis lesson for 2 people'
+      },
+      '5session': {
+        name: '5-Session Tennis Package',
+        price: 27500, // $275.00 in cents
+        description: '5 x 1-hour private tennis lessons'
+      },
+      '10session': {
+        name: '10-Session Tennis Package',
+        price: 50000, // $500.00 in cents
+        description: '10 x 1-hour private tennis lessons'
+      }
+    };
+
+    async function checkout(productId) {
+      const product = products[productId];
+      
+      try {
+        // For GitHub Pages, we'll use a simple redirect to Stripe Checkout
+        // You'll need to create these checkout sessions in your Stripe Dashboard
+        // or use a backend service
+        
+        // Temporary solution: Show payment instructions
+        alert('Payment processing is being set up. Please contact us directly to book your session, or check back soon for online payment options.');
+        
+        // Alternative: Redirect to contact form
+        // window.location.href = 'contact.html';
+        
+        // Future implementation will use:
+        // const response = await fetch('https://your-backend-url.com/create-checkout-session', {
+        //   method: 'POST',
+        //   headers: { 'Content-Type': 'application/json' },
+        //   body: JSON.stringify({
+        //     product: productId,
+        //     name: product.name,
+        //     price: product.price,
+        //     description: product.description,
+        //     success_url: 'https://shahabgeravesh.github.io/TennisCoach/success.html',
+        //     cancel_url: 'https://shahabgeravesh.github.io/TennisCoach/classes.html'
+        //   }),
+        // });
+        // const session = await response.json();
+        // const result = await stripe.redirectToCheckout({ sessionId: session.id });
+        
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Please contact us directly to book your session.');
+      }
+    }
+  </script>
 </body>
 </html> 
