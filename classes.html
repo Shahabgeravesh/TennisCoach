@@ -47,19 +47,10 @@
     <section class="booking">
       <h2>Book Your Session</h2>
       <p>After payment, please book your preferred time below:</p>
-      <!-- Calendly inline widget placeholder -->
-      <div id="calendly-widget" style="min-width:320px;height:630px;"></div>
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/shahabgeravesh/tennis-lesson" style="min-width:320px;height:630px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <script type="text/javascript">
-        window.onload = function() {
-          Calendly.initInlineWidget({
-            url: 'https://calendly.com/shahab-geravesh/tennis-lesson', // Update this with your actual Calendly link
-            parentElement: document.getElementById('calendly-widget'),
-            prefill: {},
-            utm: {}
-          });
-        };
-      </script>
+      <!-- Calendly inline widget end -->
     </section>
   </main>
   <footer>
