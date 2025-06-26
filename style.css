@@ -581,4 +581,140 @@ footer {
   .success-icon {
     font-size: 3rem;
   }
+}
+
+/* Thank You Page */
+.thank-you-page {
+  max-width: 800px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.thank-you-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.thank-you-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-page h1 {
+  color: #1b5e20;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.thank-you-page p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.response-info {
+  margin: 3rem 0;
+  text-align: left;
+}
+
+.response-info h2 {
+  color: #1b5e20;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-item {
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #43a047;
+  transition: transform 0.3s ease;
+}
+
+.info-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-item h3 {
+  color: #1b5e20;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.info-item p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.contact-alternative {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f1f8e9 0%, #e8f5e8 100%);
+  border-radius: 10px;
+  border: 2px solid #43a047;
+}
+
+.contact-alternative h3 {
+  color: #1b5e20;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.contact-alternative p {
+  color: #555;
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design for Thank You Page */
+@media (max-width: 768px) {
+  .thank-you-page {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .thank-you-page h1 {
+    font-size: 2rem;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .response-info h2 {
+    font-size: 1.5rem;
+  }
+  
+  .contact-alternative {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thank-you-page h1 {
+    font-size: 1.8rem;
+  }
+  
+  .thank-you-icon {
+    font-size: 3rem;
+  }
+  
+  .info-item {
+    padding: 1rem;
+  }
 } 
