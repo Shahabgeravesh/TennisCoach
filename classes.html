@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tennis lesson packages and pricing in Daly City, CA. Book private or small group sessions and pay securely online.">
+  <meta name="keywords" content="tennis lessons, pricing, Daly City, private tennis, tennis packages, book tennis, pay online">
+  <meta name="author" content="Shahab Geravesh">
+  <title>Classes & Pricing | Rally Tennis Court</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Rally Tennis Court</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="classes.html">Classes & Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="pricing">
+      <h1>Classes & Pricing</h1>
+      <div class="package">
+        <h2>Single Session</h2>
+        <p>1 hour, up to 2 people</p>
+        <p class="price">$60</p>
+        <a href="#pay-single" class="pay-btn">Pay with Stripe</a>
+      </div>
+      <div class="package">
+        <h2>5-Session Package</h2>
+        <p>5 x 1 hour, up to 2 people</p>
+        <p class="price">$275 <span class="save">(save $25)</span></p>
+        <a href="#pay-5" class="pay-btn">Pay with Stripe</a>
+      </div>
+      <div class="package">
+        <h2>10-Session Package</h2>
+        <p>10 x 1 hour, up to 2 people</p>
+        <p class="price">$500 <span class="save">(save $100)</span></p>
+        <a href="#pay-10" class="pay-btn">Pay with Stripe</a>
+      </div>
+    </section>
+    <section class="booking">
+      <h2>Book Your Session</h2>
+      <p>After payment, please book your preferred time below:</p>
+      <!-- Calendly inline widget placeholder -->
+      <div id="calendly-widget" style="min-width:320px;height:630px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <script type="text/javascript">
+        window.onload = function() {
+          Calendly.initInlineWidget({
+            url: 'https://calendly.com/', // Replace with your actual Calendly link
+            parentElement: document.getElementById('calendly-widget'),
+            prefill: {},
+            utm: {}
+          });
+        };
+      </script>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Rally Tennis Court. All rights reserved.</p>
+  </footer>
+</body>
+</html> 

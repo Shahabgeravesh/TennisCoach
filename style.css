@@ -1,0 +1,164 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #222;
+}
+header {
+  background: #1b5e20;
+  color: #fff;
+  padding: 0.5em 0;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+  margin: 0;
+  padding: 0;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ffd600;
+}
+.hero {
+  background: linear-gradient(120deg, #43a047 60%, #ffd600 100%);
+  color: #fff;
+  text-align: center;
+  padding: 3em 1em 2em 1em;
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+.cta-btn {
+  display: inline-block;
+  background: #ffd600;
+  color: #1b5e20;
+  padding: 0.8em 2em;
+  border-radius: 30px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 1.5em;
+  transition: background 0.2s;
+}
+.cta-btn:hover {
+  background: #fffde7;
+}
+.features, .about-coach, .pricing, .booking, .contact-form {
+  max-width: 700px;
+  margin: 2em auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.07);
+  padding: 2em 1.5em;
+}
+.features ul, .about-coach ul {
+  padding-left: 1.2em;
+}
+.features li, .about-coach li {
+  margin-bottom: 0.5em;
+}
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.package {
+  border: 2px solid #43a047;
+  border-radius: 8px;
+  padding: 1.2em 1em;
+  margin-bottom: 1em;
+  background: #f1f8e9;
+}
+.package h2 {
+  margin-top: 0;
+}
+.price {
+  font-size: 1.5em;
+  color: #1b5e20;
+  font-weight: bold;
+}
+.save {
+  color: #ffd600;
+  font-size: 1em;
+}
+.pay-btn {
+  display: inline-block;
+  background: #43a047;
+  color: #fff;
+  padding: 0.6em 1.5em;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 0.8em;
+  transition: background 0.2s;
+}
+.pay-btn:hover {
+  background: #388e3c;
+}
+.booking h2 {
+  margin-top: 0;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.contact-form input, .contact-form textarea {
+  padding: 0.7em;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.contact-form button {
+  background: #43a047;
+  color: #fff;
+  border: none;
+  padding: 0.8em 1.5em;
+  border-radius: 20px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-form button:hover {
+  background: #388e3c;
+}
+footer {
+  text-align: center;
+  padding: 1.5em 0 1em 0;
+  background: #1b5e20;
+  color: #fff;
+  margin-top: 2em;
+}
+@media (max-width: 700px) {
+  nav ul {
+    gap: 0.7em;
+  }
+  .features, .about-coach, .pricing, .booking, .contact-form {
+    padding: 1em 0.5em;
+  }
+  .hero h1 {
+    font-size: 1.5em;
+  }
+} 
