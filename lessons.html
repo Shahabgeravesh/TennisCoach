@@ -80,44 +80,7 @@
           }
         }
       },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Service",
-          "name": "5-Session Tennis Package",
-          "description": "5 x 1-hour private tennis lessons",
-          "provider": {
-            "@type": "Organization",
-            "name": "Rally Tennis Coaching"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "275.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 4,
-        "item": {
-          "@type": "Service",
-          "name": "10-Session Tennis Package",
-          "description": "10 x 1-hour private tennis lessons",
-          "provider": {
-            "@type": "Organization",
-            "name": "Rally Tennis Coaching"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "500.00",
-            "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
-          }
-        }
-      }
+
     ]
   }
   </script>
@@ -156,19 +119,7 @@
           <p class="price">$100 <span class="save">($50 each, save $30)</span></p>
           <button class="pay-btn" onclick="checkout('2person')">Book Now</button>
         </div>
-        <div class="package featured">
-          <div class="featured-badge">Most Popular</div>
-          <h2>5-Session Package</h2>
-          <p class="package-desc">Great value for regular players</p>
-          <p class="price">$275 <span class="save">(save $50)</span></p>
-          <button class="pay-btn" onclick="checkout('5session')">Book Now</button>
-        </div>
-        <div class="package">
-          <h2>10-Session Package</h2>
-          <p class="package-desc">Best value for serious players</p>
-          <p class="price">$500 <span class="save">(save $150)</span></p>
-          <button class="pay-btn" onclick="checkout('10session')">Book Now</button>
-        </div>
+
       </div>
     </section>
     <section class="booking">
@@ -203,16 +154,7 @@
         price: 10000, // $100.00 in cents
         description: '1-hour tennis lesson for 2 people'
       },
-      '5session': {
-        name: '5-Session Tennis Package',
-        price: 27500, // $275.00 in cents
-        description: '5 x 1-hour private tennis lessons'
-      },
-      '10session': {
-        name: '10-Session Tennis Package',
-        price: 50000, // $500.00 in cents
-        description: '10 x 1-hour private tennis lessons'
-      }
+
     };
 
     async function checkout(productId) {
@@ -226,12 +168,6 @@
         } else if (productId === '2person') {
           // Redirect to 2-Person Session Payment Link
           window.location.href = 'https://buy.stripe.com/5kQ6oH55qf7k3Vk3exdnW01';
-        } else if (productId === '5session') {
-          // Redirect to 5-Session Package Payment Link
-          window.location.href = 'https://buy.stripe.com/4gMcN5gO80cqezY3exdnW02';
-        } else if (productId === '10session') {
-          // Redirect to 10-Session Package Payment Link
-          window.location.href = 'https://buy.stripe.com/7sYdR91Te7ESajI2atdnW03';
         } else {
           // Temporary solution for other packages
           alert('Payment processing is being set up. Please contact us directly to book your session, or check back soon for online payment options.');
