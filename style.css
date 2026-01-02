@@ -292,13 +292,6 @@ nav a:hover {
   box-shadow: 0 10px 30px rgba(67, 160, 71, 0.2);
 }
 
-.feature-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  display: block;
-  animation: pulse 2s ease-in-out infinite;
-}
-
 .feature-item h3 {
   color: #1b5e20;
   margin-bottom: 1rem;
