@@ -120,7 +120,9 @@
   <script>
     function toggleMobileMenu() {
       const navMenu = document.getElementById('nav-menu');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
       navMenu.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
     }
     
     // Close mobile menu when clicking outside
@@ -130,6 +132,7 @@
       
       if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
         navMenu.classList.remove('active');
+        mobileToggle.classList.remove('active');
       }
     });
   </script>

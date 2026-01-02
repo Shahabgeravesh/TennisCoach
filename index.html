@@ -159,27 +159,33 @@
     <section class="features">
       <h2>Why Choose Rally Tennis Coaching?</h2>
       <div class="features-grid">
-        <div class="feature-item">
+        <div class="feature-item fade-in">
+          <span class="feature-icon">🎾</span>
           <h3>Experienced Coaches</h3>
           <p>Extensive playing and coaching experience</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item fade-in fade-in-delay-1">
+          <span class="feature-icon">👨‍👩‍👧‍👦</span>
           <h3>All Ages Welcome</h3>
           <p>Kids and beginners welcome</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item fade-in fade-in-delay-2">
+          <span class="feature-icon">📅</span>
           <h3>Flexible Scheduling</h3>
           <p>Convenient times that work for you</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item fade-in fade-in-delay-3">
+          <span class="feature-icon">🛡️</span>
           <h3>Safe Environment</h3>
           <p>CPR and First Aid certified coaches</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item fade-in fade-in-delay-1">
+          <span class="feature-icon">🎯</span>
           <h3>Personalized Lessons</h3>
           <p>Tailored to your skill level and goals</p>
         </div>
-        <div class="feature-item">
+        <div class="feature-item fade-in fade-in-delay-2">
+          <span class="feature-icon">🏟️</span>
           <h3>Court & Balls Provided</h3>
           <p>Coaches provide tennis court and balls</p>
         </div>
@@ -196,7 +202,9 @@
   <script>
     function toggleMobileMenu() {
       const navMenu = document.getElementById('nav-menu');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
       navMenu.classList.toggle('active');
+      mobileToggle.classList.toggle('active');
     }
     
     // Close mobile menu when clicking outside
@@ -206,7 +214,31 @@
       
       if (!navMenu.contains(event.target) && !mobileToggle.contains(event.target)) {
         navMenu.classList.remove('active');
+        mobileToggle.classList.remove('active');
       }
+    });
+    
+    // Intersection Observer for fade-in animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all fade-in elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      fadeElements.forEach(el => {
+        observer.observe(el);
+      });
     });
   </script>
 </body>
