@@ -728,6 +728,11 @@ footer {
     height: 280px;
     object-position: center 30%;
   }
+
+  .gallery-item:nth-child(2) img {
+    height: 260px;
+    object-position: center 25%;
+  }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
     font-size: 2rem;
