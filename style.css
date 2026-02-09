@@ -715,7 +715,8 @@ footer {
   }
 
   .gallery-item:first-child img {
-    object-position: center top;
+    height: 280px;
+    object-position: center 30%;
   }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
@@ -793,6 +794,11 @@ footer {
   
   .gallery-item img {
     height: 200px;
+  }
+
+  .gallery-item:first-child img {
+    height: 240px;
+    object-position: center 30%;
   }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
