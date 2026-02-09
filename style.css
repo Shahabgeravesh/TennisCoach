@@ -268,6 +268,16 @@ nav a:hover {
   gap: 1.5rem;
 }
 
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-item:last-child {
+    grid-column: span 2;
+  }
+}
+
 .gallery-item {
   margin: 0;
   overflow: hidden;
