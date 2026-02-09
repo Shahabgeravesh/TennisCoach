@@ -235,6 +235,60 @@ nav a:hover {
   transform: translateY(-1px) scale(1.02);
 }
 
+/* Photo Gallery */
+.photo-gallery {
+  max-width: 1200px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.photo-gallery h2 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #1b5e20;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+
+.gallery-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+  font-size: 1.05rem;
+  color: #666;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery-item {
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  background: #f8f9fa;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
 /* Main Content Sections */
 .features, .about-coach, .pricing, .booking, .contact-form {
   max-width: 1200px;
@@ -650,6 +704,15 @@ footer {
     margin: 2rem 1rem;
     padding: 2rem 1rem;
   }
+
+  .photo-gallery {
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .gallery-item img {
+    height: 220px;
+  }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
     font-size: 2rem;
@@ -713,6 +776,19 @@ footer {
   .features, .about-coach, .pricing, .booking, .contact-form {
     margin: 1rem 0.5rem;
     padding: 1.5rem 1rem;
+  }
+  
+  .photo-gallery {
+    margin: 1rem 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .photo-gallery h2 {
+    font-size: 2rem;
+  }
+  
+  .gallery-item img {
+    height: 200px;
   }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
