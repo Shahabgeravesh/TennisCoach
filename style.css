@@ -713,6 +713,10 @@ footer {
   .gallery-item img {
     height: 220px;
   }
+
+  .gallery-item:first-child img {
+    object-position: center top;
+  }
   
   .features h2, .about-coach h1, .pricing h1, .booking h2, .contact-form h1 {
     font-size: 2rem;
