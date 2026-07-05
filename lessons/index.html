@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://assets.calendly.com https://calendly.com https://www.googletagmanager.com https://www.google-analytics.com https://googleads.g.doubleclick.net;">
+  <meta name="description" content="Affordable private tennis lessons in San Francisco and Daly City. Single sessions ($65) and 2-person sessions ($100). Court and equipment included. Book online.">
+  <meta property="og:title" content="Tennis Lessons & Pricing | Rally Tennis Coaching">
+  <meta property="og:description" content="Private tennis lessons from $65/hour. Court and equipment included. Book online in Daly City and San Francisco.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shahabgeravesh.github.io/TennisCoach/lessons/">
+  <meta property="og:image" content="https://shahabgeravesh.github.io/TennisCoach/images/83441207-B803-442E-BBBE-9BD74AAB7DFB.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tennis Lessons & Pricing | Rally Tennis Coaching">
+  <meta name="twitter:description" content="Private tennis lessons from $65/hour. Book online today.">
+  <link rel="canonical" href="https://shahabgeravesh.github.io/TennisCoach/lessons/">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" href="../favicon.svg">
+  <title>Tennis Lessons & Pricing | Rally Tennis Coaching</title>
+  <link rel="stylesheet" href="../style.css?v=20260705">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11541692923"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-11541692923');
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Tennis Lesson Packages",
+    "description": "Tennis lesson packages and pricing in Daly City, CA",
+    "url": "https://shahabgeravesh.github.io/TennisCoach/lessons/",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Service",
+          "name": "Single Tennis Session",
+          "description": "1-hour private tennis lesson",
+          "provider": { "@type": "Organization", "name": "Rally Tennis Coaching" },
+          "offers": { "@type": "Offer", "price": "65.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Service",
+          "name": "2-Person Tennis Session",
+          "description": "1-hour tennis lesson for 2 people",
+          "provider": { "@type": "Organization", "name": "Rally Tennis Coaching" },
+          "offers": { "@type": "Offer", "price": "100.00", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Book Tennis Lessons",
+    "description": "Book a private tennis lesson with Rally Tennis Coaching",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Choose Your Package",
+        "text": "Select a Single Session ($65) or 2-Person Session ($100). All lessons are 1 hour with court and equipment included."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Complete Payment",
+        "text": "Click Book Now and complete secure payment through Stripe."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Schedule Your Lesson",
+        "text": "After payment, schedule your preferred date and time on the confirmation page."
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/TennisCoach/" class="logo">Rally Tennis Coaching</a>
+      <button type="button" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="nav-menu">
+        <li><a href="/TennisCoach/">Home</a></li>
+        <li><a href="/TennisCoach/lessons/">Lessons</a></li>
+        <li><a href="/TennisCoach/contact/">Contact</a></li>
+        <li><a href="/TennisCoach/about/">About</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="pricing">
+      <h1>Tennis Lesson Packages</h1>
+      <p class="pricing-intro">Choose the package that works best for you. All sessions are 1-hour private lessons with court and equipment included. Serving Daly City, San Francisco, and the Bay Area.</p>
+      <div class="packages-grid">
+        <div class="package">
+          <h2>Single Session</h2>
+          <p class="package-desc">Perfect for trying out tennis or a one-time lesson</p>
+          <p class="price">$65</p>
+          <button class="pay-btn" type="button" onclick="checkout('single')">Book Now</button>
+        </div>
+        <div class="package">
+          <h2>2-Person Session</h2>
+          <p class="package-desc">Great for friends, couples, or parent-child lessons</p>
+          <p class="price">$100 <span class="save">($50 each, save $30)</span></p>
+          <button class="pay-btn" type="button" onclick="checkout('2person')">Book Now</button>
+        </div>
+      </div>
+
+      <div class="booking-steps">
+        <div class="booking-step">
+          <div class="booking-step-number">1</div>
+          <h3>Choose a Package</h3>
+          <p>Select single or 2-person session above</p>
+        </div>
+        <div class="booking-step">
+          <div class="booking-step-number">2</div>
+          <h3>Pay Securely</h3>
+          <p>Complete payment through Stripe</p>
+        </div>
+        <div class="booking-step">
+          <div class="booking-step-number">3</div>
+          <h3>Schedule</h3>
+          <p>Pick your date and time on the confirmation page</p>
+        </div>
+      </div>
+
+      <p class="booking-note">After payment, you'll be redirected to schedule your lesson. Questions? <a href="/TennisCoach/contact/">Contact us</a> or email <a href="mailto:Shahabgeravesh@gmail.com">Shahabgeravesh@gmail.com</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <p class="footer-logo">Rally Tennis Coaching</p>
+          <p>Daly City, California</p>
+        </div>
+        <div class="footer-links">
+          <a href="/TennisCoach/lessons/">Lessons</a>
+          <a href="/TennisCoach/about/">About</a>
+          <a href="/TennisCoach/contact/">Contact</a>
+        </div>
+        <div class="footer-contact">
+          <a href="mailto:Shahabgeravesh@gmail.com">Shahabgeravesh@gmail.com</a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 Rally Tennis Coaching. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var paymentLinks = {
+      single: 'https://buy.stripe.com/4gM9AT55q3oCfE27uNdnW00',
+      '2person': 'https://buy.stripe.com/5kQ6oH55qf7k3Vk3exdnW01'
+    };
+
+    function checkout(productId) {
+      var url = paymentLinks[productId];
+      if (url) {
+        window.location.href = url;
+      } else {
+        window.location.href = '/TennisCoach/contact/';
+      }
+    }
+  </script>
+  <script src="../main.js?v=20260705"></script>
+</body>
+</html>
